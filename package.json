@@ -30,7 +30,9 @@
     "readable-stream": "^3.3.0",
     "set-value": ">=2.0.1",
     "stylelint": "^13.2.1",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "merge": ">=1.2.1",
+    "deep-extend": ">=0.5.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
