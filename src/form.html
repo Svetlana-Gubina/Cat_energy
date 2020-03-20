@@ -7,6 +7,7 @@
     </head>
     <body>
         <div class="wrapper">
+
             <header class="page-header">
                 <nav class="main-nav">
                     <div class="main-nav__flex main-nav__flex-logo">
@@ -14,102 +15,109 @@
                         <button class="main-nav__toggle visually-hidden" type="button">Открыть/Закрыть меню</button>
                     </div>
                     <div class="main-nav__flex">
-                        <ul>
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">Каталог продукции</a></li>
-                            <li><a href="#">Подбор программы</a></li>
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a href="#">Главная</a></li>
+                            <li class="main-nav__item"><a href="#">Каталог продукции</a></li>
+                            <li class="main-nav__item"><a href="#">Подбор программы</a></li>
                         </ul>
                     </div>
                 </nav>
             </header>
+
             <main class="page-main order">
-                <section>
-                    <h1>Подбор программы</h1>
-                    <p>Заполните анкету и мы подберем 
+
+                <section class="order__block">
+                    <h1 class="order__heading">Подбор программы</h1>
+                    <p class="order__paragraph">Заполните анкету и мы подберем 
                         программу питания для вашего кота</p>
                     <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
-                        <fieldset>
+                        <fieldset class="order__form-fieldset">
                             <h3 class="visually-hidden">Общая информация</h3>
-                            <p>
+                            <p class="order__form-block">
                                 <label id="name">Имя:*</label>
                                 <input id="name" type="text" name="Name" placeholder="Барсик" required>
                             </p>
-                            <p>
+                            <p class="order__form-block">
                                 <label id="weight">Вес (кг):*</label>
                                 <input id="weight" type="number" name="Weight" placeholder="7" required>
                             </p>
-                            <p>
+                            <p class="order__form-block">
                                 <label id="age">Возраст (лет):</label>
                                 <input id="age" type="number" name="Age" placeholder="7">
                             </p>
                         </fieldset>
-                        <fieldset>
+
+                        <fieldset class="order__form-fieldset">
                             <h3 class="visually-hidden">Цель</h3>
-                            <p>
-                                <input id="slimm" type="radio" name="Purpose" value="Похудение" checked>
+                            <p class="order__form-block">
+                                <input class="order__form-radio" id="slimm" type="radio" name="Purpose" value="Похудение" checked>
                                 <label id="slimm">Похудение</label>
                             </p>
-                            <p>
-                                <input id="massGain" type="radio" name="Purpose" value="Набор массы">
+                            <p class="order__form-block">
+                                <input class="order__form-radio" id="massGain" type="radio" name="Purpose" value="Набор массы">
                                 <label id="massGain">Набор массы</label>
                             </p>
-                            <p>
-                                <input id="advice" type="radio" name="Purpose" value="Не знаю (Нужен ваш совет)">
+                            <p class="order__form-block">
+                                <input class="order__form-radio" id="advice" type="radio" name="Purpose" value="Не знаю (Нужен ваш совет)">
                                 <label id="advice">Не знаю (Нужен ваш совет)</label>
                             </p>
                         </fieldset>
-                        <fieldset>
+
+                        <fieldset class="order__form-fieldset">
                             <h3>Контактные данные (владельца кота)</h3>
-                            <p>
+                            <p class="order__form-block">
                                 <label id="email">E-mail:*</label>
                                 <input id="email" type="email" name="E-mail" placeholder="kuklachev@gmail.com" required>
                             </p>
-                            <p>
+                            <p class="order__form-block">
                                 <label id="tel">Телефон:*</label>
                                 <input id="tel" type="tel" name="Telephone" placeholder="8 (960) 900-60-90" required>
                             </p>
                         </fieldset>
-                        <fieldset>
-                            <p>
-                                <label id="">Комментарий</label>
-                                <textarea class="" id="" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+                        <fieldset class="order__form-fieldset">
+                            <p class="order__form-block">
+                                <label id="habits">Комментарий</label>
+                                <textarea class="order__form-habits" id="habits" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
                             </p>
                         </fieldset>
-                        <fieldset>
+
+                        <fieldset class="order__form-fieldset">
                             <h3 class="order__form-legend">Дополнительно</h3>
                             <p class="order__form-field">
-                                <input type="checkbox"id="sweetener" type="checkbox" name="Sweetener" value="Сахарозаменитель" checked>
+                                <input class="order__form-checkbox" type="checkbox" id="sweetener" type="checkbox" name="Sweetener" value="Сахарозаменитель" checked>
                                 <label class="order__form-label" for="sweetener">Сахарозаменитель</label>
                             </p>
                             <p class="order__form-field">
-                                <input type="checkbox"id="water" type="checkbox" name="Water" value="Питьевая вода">
+                                <input class="order__form-checkbox" type="checkbox" id="water" type="checkbox" name="Water" value="Питьевая вода">
                                 <label class="order__form-label" for="water">Питьевая вода</label>
                             </p>
                             <p class="order__form-field">
-                                <input type="checkbox"id="milk" type="checkbox" name="Milk" value="Молоко">
+                                <input class="order__form-checkbox" type="checkbox" id="milk" type="checkbox" name="Milk" value="Молоко">
                                 <label class="order__form-label" for="milk">Молоко</label>
                             </p>
                             <p class="order__form-field">
-                                <input type="checkbox"id="vitamins" type="checkbox" name="Vitamins" value="Витамины">
+                                <input class="order__form-checkbox" type="checkbox" id="vitamins" type="checkbox" name="Vitamins" value="Витамины">
                                 <label class="order__form-label" for="vitamins">Витамины</label>
                             </p>
                         </fieldset>
+
                         <div class="order__form-footer">
                             <button class="order__form-button button" type="submit">Отправить заявкуз</button>
-                            <p class="order__text-small">* — Обязательные поля
-
-                            </p>
+                            <p class="order__text-small">* — Обязательные поля</p>
                         </div>
                     </form>
                 </section>
+
                 <section class="contacts">
                     <h2 class="visually-hidden">Контакты</h2>
-                    <p>приглашаем к сотрудничеству дилеров!</p>
-                    <p>ул. Большая Конюшенная, д. 19/8 
+                    <p class="contacts__ivite">приглашаем к сотрудничеству дилеров!</p>
+                    <p  class="contacts__address">ул. Большая Конюшенная, д. 19/8 
                         Санкт-Петербург</p>
                     <div class="contacts__map"></div>
                 </section>
+
             </main>
+
             <footer class="page-footer">
                 <div class="page-footer__container page-footer__logo-cont">
                     <a class="page-footer__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
