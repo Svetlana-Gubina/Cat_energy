@@ -1,0 +1,31 @@
+@font-face {
+    font-family: ;
+    src: local(), url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
+    font-weight:  ;
+    font-style: ;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: ;
+    src: local(), url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
+    font-weight: ;
+    font-style: ;
+    font-display: swap;
+  }
+
+body {
+    display: flex;
+    min-width: $mobile-width;
+
+    color: ;
+
+    font-family: ;
+    font-size: ;
+    line-height: 1.5;
+  }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
