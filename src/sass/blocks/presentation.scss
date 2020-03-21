@@ -1,0 +1,56 @@
+.presentation {
+    width: $mobile-width;
+    background-color: $base-color;
+    min-height: 490px;
+
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    @include flex($direction: column);
+    justify-content: flex-start;
+    align-items: center;
+    padding: 9.375%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.presentation__title {
+    outline: 2px dashed crimson;
+    color: #ffffff;
+    /*font-family: "Oswald", Arial, Helvetica, sans-serif;*/
+    font-size: 36px;
+    font-size: 2.25em;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 2px;
+
+    margin-bottom: 10%;
+
+    @include margin-auto();
+}
+
+.presentation__promo-text {
+    color: #ffffff;
+    /*font-family: "Oswald", Arial, Helvetica, sans-serif;*/
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    @include margin-auto();
+
+    margin-bottom: 10%;
+}
+
+.presentation__can {
+    outline: 2px dashed crimson;
+
+    width: 280px;
+    height: 270px;
+    @include margin-auto();
+    margin-bottom: 10%;
+}
+
+.presentation__button {
+    outline: 2px dashed crimson;
+
+    width: 100%;
+    margin-bottom: 10%;
+}

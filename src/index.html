@@ -4,11 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>HTMLAcademy - Cat Energy</title>
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div class="wrapper">
+
             <header class="page-header">
                 <nav class="main-nav">
                     <div class="main-nav__flex main-nav__flex-logo">
@@ -17,9 +18,9 @@
                     </div>
                     <div class="main-nav__flex">
                         <ul class="main-nav__list">
-                            <li class="main-nav__item"><a href="#">Главная</a></li>
-                            <li class="main-nav__item"><a href="#">Каталог продукции</a></li>
-                            <li class="main-nav__item"><a href="#">Подбор программы</a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="#">Каталог продукции</a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="#">Подбор программы</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -28,15 +29,17 @@
             <main class="page-main">
 
                 <section class="presentation">
-                    <h1 class="page-main__title">Функциональное
+                    <h1 class="presentation__title">Функциональное
                         питание для котов
                     </h1>
-                    <div>Занялся собой? Займись котом!</div>
-                    <a href="#">Подобрать программу</a>
-                </section
-                >
+                    <p class="presentation__promo-text">Занялся собой? Займись котом!</p>
+                    <img class="presentation__can" src="#" width="" height="" alt="">
+                    <a class="button presentation__button" href="#">Подобрать программу</a>
+                </section>
+
                 <section class="product-types">
                     <h2 class="visually-hidden">Типы продукции</h2>
+
                     <div class="product-types__target">
                         <h3 class="product-types__heading">Похудение</h3>
                         <p class="product-types__paragraph">
@@ -44,6 +47,7 @@
                         </p>
                         <a class="product-types__target-link" href="#">Каталог Slim</a>
                     </div>
+
                     <div class="product-types__target">
                         <h3 class="product-types__heading">Набор массы</h3>
                         <p class="product-types__paragraph">
@@ -71,39 +75,36 @@
                         </li>
                     </ul>
                 </section>
+
                 <section class="example">
                     <h2 class="example__heading">Живой пример</h2>
                     <p class="example__paragraph">
                         Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. 
                     </p>
                     <table class="example__table">
-                        <tr>
-                            <th>снижение 
-                                веса</th>
-                            <td>5 кг</td>
+                        <tr class="example__table-row">
+                            <td class="example__table-cell">5 кг</td>
+                            <td class="example__table-cell">60 дней</td>
                         </tr>
-                        <tr>
-                            <th>затрачено 
-                                времени</th>
-                            <td>60 дней</td>
+                        <tr class="example__table-row">
+                            <td class="example__table-cell">снижение 
+                                веса</td>
+                            <td class="example__table-cell">затрачено 
+                                времени</td>
                         </tr>
                     </table>
-                    <span>Затраты на питание: 15 000 руб.</span>
+                    <p class="example__text">Затраты на питание: 15 000 руб.</p>
                     <div class="example_slider">
-                        <ul>
-                            <li>
-                                <img src="#" width="" height="" alt="">
-                            </li>
-                            <li>
-                                <img src="#" width="" height="" alt="">
-                            </li>
-                        </ul>
-                        <div>
+                        <div class="example_slider-div">
+                            <img class="example_slider-img" src="#" width="" height="" alt="">
+                        <!--<img src="#" width="" height="" alt="">-->
+                        </div>
+                        <div class="example_slider-toggle">
                             <label class="checkbox">
                                 <input type="checkbox" />
                                 <div class="checkbox__text">Было</div>
                                 <div class="checkbox__text">Стало</div>
-                              </label>
+                            </label>
                         </div>
                     </div>
                 </section>
@@ -113,7 +114,10 @@
                     <p class="contacts__ivite">приглашаем к сотрудничеству дилеров!</p>
                     <p  class="contacts__address">ул. Большая Конюшенная, д. 19/8 
                         Санкт-Петербург</p>
-                    <div class="contacts__map"></div>
+                </section>
+
+                <section class="map">
+                    <div class="map__img"></div>
                 </section>
 
             </main>
@@ -143,6 +147,7 @@
                     </a>
                   </div>
             </footer>
+
         </div>
     </body>
 </html>

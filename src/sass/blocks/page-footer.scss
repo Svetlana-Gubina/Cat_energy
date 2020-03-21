@@ -1,4 +1,10 @@
+.page-footer {
+  background-color: $bg-color;
+}
 
+.page-footer__social-list {
+    @include list();
+}
 
 @media screen and (min-width: $tablet-width) {
 

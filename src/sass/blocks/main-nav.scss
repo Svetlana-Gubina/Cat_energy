@@ -1,0 +1,39 @@
+.main-nav__flex {
+    outline: 2px dashed crimson;
+
+    box-sizing: border-box;
+}
+
+.main-nav__list {
+    @include list();
+    @include flex ($direction: column);
+    box-sizing: border-box;
+}
+
+.main-nav__item {
+    outline: 2px dashed blue;
+    width: 100%;
+    text-align: center;
+}
+
+.main-nav__link {
+    display: block;
+    padding: 1em;
+    color: $dark-color;
+    text-decoration: none;
+
+    &-hover,
+    &:hover {
+        opacity: 0.6;
+    }
+  
+    &-focus,
+    &:focus {
+        opacity: 0.6;
+    }
+  
+    &-active,
+    &:active {
+        opacity: 0.3;
+    }
+}
