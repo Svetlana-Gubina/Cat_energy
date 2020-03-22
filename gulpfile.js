@@ -67,7 +67,7 @@ gulp.task("server", function () {
   gulp.watch("src/sass/**/*.sass", gulp.series("css"));
   // gulp.watch('src/img/icon-*.svg', gulp.series('sprite', 'html','refresh'));
   // gulp.watch("src/*.html", gulp.series('html','refresh'));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("src/*.html").on("change", server.reload);
 });
 
 // gulp.task('refresh', function(done) {

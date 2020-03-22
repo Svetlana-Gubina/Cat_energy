@@ -2,9 +2,11 @@
     @include flex($direction: row);
     justify-content: space-between;
     padding: 10%;
+    box-sizing: border-box;
 }
 
 .contacts__ivite {
+    outline: 3px dashed darkred;
     max-width: 50%;
     color: $dark-color;
     font-family: "Oswald", Arial, Helvetica, sans-serif;
@@ -15,7 +17,8 @@
 }
 
 .contacts__address {
-    max-width: 50%;
+    outline: 3px dashed darkslategray;
+    max-width: 45%;
     color: $light-color;
     font-size: 14px;
     font-weight: 400;

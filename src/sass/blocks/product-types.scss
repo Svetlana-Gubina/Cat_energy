@@ -2,7 +2,6 @@
     width: $mobile-width;
     padding: 9.375%;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
     @include flex($direction: column);
     justify-content: flex-start;
     align-items: center;

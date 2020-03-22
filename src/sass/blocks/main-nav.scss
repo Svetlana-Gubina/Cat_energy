@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+.main-nav__flex-logo {
+    @include flex ($direction: row);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.main-nav__toggle {
+    font-size: 0;
+    width: 24px;
+    height: 18px;
+    background-color: #222222;
+}
+
 .main-nav__list {
     @include list();
     @include flex ($direction: column);

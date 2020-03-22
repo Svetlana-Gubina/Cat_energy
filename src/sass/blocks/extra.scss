@@ -1,0 +1,61 @@
+.extra {
+    outline: 3px dashed purple;
+    padding: 10%;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+}
+
+.extra__heading {
+    color:$dark-color;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0.5em;
+}
+
+.extra__list {
+    @include list();
+    @include flex($direction: column);
+}
+
+.extra__item {
+    outline: 2px dashed blue;
+    @include flex($direction: column);
+    width: 100%;
+    padding: 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+}
+
+.extra__item-heading {
+    color:$dark-color;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.extra__table {
+    outline: 2px dashed blue;
+    width: 100%;
+    @include flex($direction: row);
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5%;
+}
+
+.extra__table-cell {
+   padding: 0;
+   padding-top: 0.5em;
+   padding-bottom: 0.5em;
+}
+
+.extra__button {
+    width: 100%;
+    text-align: center;
+}
