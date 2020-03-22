@@ -54,3 +54,42 @@
     width: 100%;
     margin-bottom: 10%;
 }
+
+@media screen and (min-width: $tablet-width) {
+    .presentation {
+        font-family: "Oswald", Arial, Helvetica, sans-serif;
+        width: 100%;
+        min-height: 800px;
+        display: block;
+        background-color: #ffffff;
+        background-color: lightgreen;
+
+        text-align: left;
+    }
+
+    .presentation__title {
+        color: $dark-color;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 1;
+
+        max-width: 410px;
+
+        margin: 0;
+        padding: 0.2em;
+        padding-left: 0;
+    }
+
+    .presentation__promo-text {
+        color: $dark-color;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+
+}

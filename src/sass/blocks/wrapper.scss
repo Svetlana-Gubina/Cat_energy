@@ -1,6 +1,7 @@
 .wrapper {
     outline: 3px dashed crimson;
-    width: $mobile-width;
+    /*min-width: $mobile-width;*/
+    width: $tablet-width;
     margin-right: auto;
     margin-left: auto;
 }

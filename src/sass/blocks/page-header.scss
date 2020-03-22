@@ -7,7 +7,9 @@
 }
 
 @media screen and (min-width: $tablet-width) {
-
+    .page-header {
+        margin-bottom: 5%;
+    }
 }
 
 @media screen and (min-width: $desktop-width) {

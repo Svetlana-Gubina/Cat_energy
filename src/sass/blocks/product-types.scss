@@ -59,3 +59,38 @@
         background-color: $dark-color;
     }
 }
+
+@media screen and (min-width: $tablet-width) {
+    .product-types {
+        width: 100%;
+        padding: 0;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .product-types__target {
+        outline: 2px dashed crimson;
+
+        padding-left: 5%;
+        padding-right: 50%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        margin-bottom: 5%;
+        text-align: left;
+    }
+
+    .product-types__heading {
+        font-size: 36px;
+        margin-bottom: 10%;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .product-types__paragraph {
+        margin-bottom: 10%;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+
+}
