@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Oswald";
   src: local("Oswald"), url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
@@ -794,5 +795,257 @@ input[type="radio"].visually-hidden {
 .extra__button {
   width: 100%;
   text-align: center; }
+
+.order__block {
+  padding: 10%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.order__heading {
+  color: #111111;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.8;
+  padding: 0.5em;
+  margin: 0; }
+
+.order__paragraph {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+  padding: 0.5em;
+  margin: 0;
+  margin-bottom: 2%; }
+
+/*----------FORM---------------------*/
+::-webkit-input-placeholder {
+  color: #444444;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase; }
+
+::-moz-placeholder {
+  color: #444444;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase; }
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  color: #444444;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase; }
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+  color: #444444;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase; }
+
+.order__form {
+  outline: 3px dashed green;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.order__form-fieldset {
+  outline: 3px dashed blue;
+  border: 0 none;
+  padding: 0;
+  padding-bottom: 5%;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 10%; }
+
+.order__form-legend {
+  position: relative;
+  color: #333333;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1; }
+
+.order__form-container {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: direction;
+          flex-direction: direction;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.order__form-field {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 2%;
+  padding: 0; }
+
+.order__form-block {
+  outline: 2px dashed fuchsia;
+  margin: 0;
+  padding: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.order__form-label {
+  color: #222222;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase; }
+
+.order__form-block--name label {
+  margin: 0;
+  padding: 0.5em;
+  padding-left: 0;
+  color: #444444;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: hotpink; }
+
+.order__form-name {
+  padding: 0.5em;
+  background-color: lawngreen; }
+
+/*-----------------radio-------------------------------------*/
+.order__form-radio {
+  opacity: 0; }
+
+.order__form-label--radio {
+  position: relative;
+  display: block;
+  padding: 0.5em;
+  padding-left: 3em; }
+  .order__form-label--radio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    background-color: transparent; }
+
+.order__form-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 24%;
+  left: 4%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #68b738; }
+
+/*----------contacts-----------------------------------------*/
+.order__form-block--contacts {
+  /*@include flex($direction: row);*/
+  display: inline-block;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.order__form-block--contacts label {
+  /*display: block;*/
+  margin: 0;
+  padding: 0.5em;
+  padding-left: 0;
+  color: #444444;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: hotpink; }
+
+.order__form-contact {
+  padding: 0.5em;
+  background-color: lawngreen; }
+
+/*---------------textarea-------------------------------------*/
+.order__form-block--textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: direction;
+          flex-direction: direction;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.order__form-habits {
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.order__form-textarea label {
+  display: block;
+  margin-bottom: 5%; }
+
+/*-----------checkbox - Дополнительно------------------------*/
+.order__form-checkbox {
+  opacity: 0; }
+
+.order__form-label--checkbox {
+  position: relative;
+  display: block;
+  padding: 0.5em;
+  padding-left: 3em; }
+  .order__form-label--checkbox::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    background-color: transparent; }
+
+/*
+.order__form-checkbox:checked + label::before {
+    
+}
+*/
+/*---------------FORM-FOOTER--------------------*/
+.order__form-button {
+  width: 100%;
+  margin-bottom: 2%; }
+
+.order__text-small {
+  margin: 0;
+  margin-bottom: 5%;
+  padding: 0.5em;
+  color: #444444;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-left: 10%; }
 
 /*# sourceMappingURL=style.css.map */
