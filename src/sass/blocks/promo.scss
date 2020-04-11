@@ -1,4 +1,5 @@
 .promo {
+    outline: 3px dashed red;
     padding: 9.375%;
     box-sizing: border-box;
     margin-bottom: 10%;
@@ -31,4 +32,47 @@
     &::before {
 
     }
+}
+
+@media screen and (min-width: $tablet-width) {
+    .promo {
+        padding: 0;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .promo__heading {
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    .promo__list {
+        @include flex ($direction: row);
+    }
+
+    .promo__item {
+        max-width: 50%;
+        margin-bottom: 60px;
+        padding-top: 10%;
+        padding-left: 0;
+        text-align: left;
+        position: relative;
+
+        min-height: 150px; // DELETE!
+        // background-image: url();
+    }
+
+    .promo__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 22.3%;
+        height: 32%;
+        background-color: $base-color;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+
 }
