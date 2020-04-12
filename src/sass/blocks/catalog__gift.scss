@@ -27,3 +27,23 @@
     max-width: 80%;
     padding: 0.2em;
 }
+
+@media screen and (min-width: $tablet-width) {
+    .catalog__gift {
+        width: 100%;
+        max-width: 100%;
+        padding: 60px 120px;
+        @include flex($direction: row);
+        margin-bottom: 70px;
+    }
+
+    .catalog__gift-text {
+        max-width: 159px;
+        margin-right: 0;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+
+}

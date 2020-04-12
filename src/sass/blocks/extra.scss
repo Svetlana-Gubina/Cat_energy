@@ -5,6 +5,12 @@
     margin-bottom: 5%;
 }
 
+.extra__tablet-container {
+    @include indent();
+    @include flex($direction: column);
+    width: 100%;
+}
+
 .extra__heading {
     color:$dark-color;
     font-family: "Oswald", Arial, Helvetica, sans-serif;
@@ -40,7 +46,6 @@
 }
 
 .extra__table {
-    outline: 2px dashed blue;
     width: 100%;
     @include flex($direction: row);
     justify-content: space-between;
@@ -58,4 +63,37 @@
 .extra__button {
     width: 100%;
     text-align: center;
+}
+
+@media screen and (min-width: $tablet-width) {
+    .extra {
+        padding: 0;
+        margin-bottom: 70px;
+    }
+
+    .extra__heading {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    .extra__tablet-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .extra__item {
+        padding: 30px;
+        margin-bottom: 0;
+    }
+
+    .extra__table  {
+        max-width: 30%;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+
 }

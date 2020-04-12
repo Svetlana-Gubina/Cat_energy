@@ -24,3 +24,33 @@
     font-weight: 400;
     line-height: 1.5;
 }
+
+@media screen and (min-width: $tablet-width) {
+    .contacts {
+        padding: 40px 60px;
+    }
+
+    .cat .contacts {
+        background-color: lightblue;
+    }
+
+    .contacts p {
+        outline: 3px dashed darkslategray;
+    }
+
+    .contacts__ivite {
+        max-width: 154px;
+        text-align: left;
+        margin-right: auto;
+    }
+
+    .contacts__address {
+        max-width: 153px;
+        text-align: right;
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+
+}
