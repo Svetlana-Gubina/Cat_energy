@@ -15,7 +15,6 @@
 }
 
 .catalog__gift-text {
-    outline: 2px dashed crimson;
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
@@ -45,5 +44,30 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .catalog__gift {
+    width: 245px;
+    max-width: 245px;
+    margin-right: 0;
+    padding: 43px;
+    background-image: url("../../images/gift-photo-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
+  .catalog__gift-text {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-top: auto;
+
+    &::before {
+      content: url("../../images/icons/gift.png");
+      position: absolute;
+      top: -100px;
+      left: 35%;
+      width: 55px;
+      height: 60px;
+    }
+  }
 }

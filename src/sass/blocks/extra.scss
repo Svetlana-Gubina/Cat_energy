@@ -1,5 +1,4 @@
 .extra {
-    outline: 3px dashed purple;
     padding: 10%;
     box-sizing: border-box;
     margin-bottom: 5%;
@@ -26,7 +25,6 @@
 }
 
 .extra__item {
-    outline: 2px dashed blue;
     @include flex($direction: column);
     width: 100%;
     padding: 0;
@@ -67,8 +65,8 @@
 
 @media screen and (min-width: $tablet-width) {
     .extra {
-        padding: 0;
-        margin-bottom: 70px;
+        padding: 0 70px;
+        margin-bottom: 0;
     }
 
     .extra__heading {
@@ -95,5 +93,44 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .extra {
+    padding: 0 70px;
+    margin-bottom: 0;
+  }
+
+  .extra__list {
+    max-width: 593px;
+  }
+
+  .extra__item {
+    outline: 3px dashed blue;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 40px;
+  }
+
+  .extra__tablet-container {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .extra__table {
+    background-color: yellow;
+    max-width: 35%;
+    @include flex($direction: row);
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .extra__item-heading {
+    max-width: 30%;
+    margin-right: 20px;
+  }
+
+  .extra__button {
+    max-width: 30%;
+  }
+
 
 }

@@ -1,6 +1,4 @@
 .main-nav__flex {
-    outline: 2px dashed crimson;
-
     box-sizing: border-box;
 }
 
@@ -91,5 +89,9 @@
         width: 80%;
         height: 3px;
         background-color: $base-color;
+    }
+
+    .main-nav__link--cat {
+      color: #222222;
     }
 }
