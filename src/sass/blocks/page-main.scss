@@ -1,9 +1,13 @@
 .page-main {
-    // background-color: lemonchiffon;
+    box-sizing: border-box;
 }
 
 @media screen and (min-width: $tablet-width) {
+    .fm .page-main {
+        // background-color: lemonchiffon;
+    }
+
     .page-main {
-        padding: 0 30px;
+        padding: 0;
     }
 }

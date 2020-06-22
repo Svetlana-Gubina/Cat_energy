@@ -67,9 +67,13 @@ input[type="radio"].visually-hidden {
   .page-header {
     margin-bottom: 5%; } }
 
+.page-main {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 @media screen and (min-width: 768px) {
   .page-main {
-    padding: 0 30px; } }
+    padding: 0; } }
 
 .page-footer {
   background-color: #CCCCCC;
@@ -351,6 +355,9 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   text-decoration: none;
   background-color: #68b738;
+  border: none;
+  -webkit-box-shadow: 0 none;
+          box-shadow: 0 none;
   padding: 1em 2em;
   text-decoration: none;
   text-align: center; }
@@ -689,7 +696,8 @@ input[type="radio"].visually-hidden {
 @media screen and (min-width: 768px) {
   .contacts {
     padding: 40px 60px; }
-  .cat .contacts {
+  .cat .contacts,
+  .fm .contacts {
     background-color: lightblue; }
   .contacts p {
     outline: 3px dashed darkslategray; }
@@ -1192,13 +1200,11 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase; }
 
 .order__form {
-  outline: 3px dashed green;
   max-width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
 .order__form-fieldset {
-  outline: 3px dashed blue;
   border: 0 none;
   padding: 0;
   padding-bottom: 5%;
@@ -1366,7 +1372,7 @@ input[type="radio"].visually-hidden {
 
 /*
 .order__form-checkbox:checked + label::before {
-    
+
 }
 */
 /*---------------FORM-FOOTER--------------------*/
@@ -1383,5 +1389,166 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
   line-height: 1.2;
   margin-left: 10%; }
+
+@media screen and (min-width: 768px) {
+  .order {
+    width: 100%; }
+  .order__form-add {
+    width: 100%;
+    margin: 0; }
+    .order__form-add .order__form-field {
+      max-width: 50%;
+      padding: 50px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+  .order__block {
+    padding: 0; }
+  .order__form {
+    min-width: 100%; }
+  .order__heading {
+    font-size: 60px;
+    font-weight: 400; }
+  .order__paragraph {
+    max-width: 50%;
+    font-size: 20px;
+    margin-left: 70px;
+    font-weight: 400; }
+  .order__form-block--name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: direction;
+            flex-direction: direction;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .order__form-name {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    border: none;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd; }
+  .order__form-block--name label {
+    margin-right: 20px; }
+  .order__form-fieldset--name,
+  .order__form-fieldset--target {
+    padding: 70px; }
+  .order__form-radio:checked + label::after {
+    top: 26%;
+    left: 1.8%; }
+  .order__form-block--target {
+    margin: 0;
+    padding: 2%;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd; }
+  .order__form-fieldset--contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: direction;
+            flex-direction: direction;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .order__form-fieldset--contacts label {
+    margin-right: 20px; }
+  .order__form-block--contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: direction;
+            flex-direction: direction;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left: 70px;
+    padding-right: 70px; }
+  .order__form-contact {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .order__form-block--textarea {
+    margin: 0;
+    padding-bottom: 0; }
+  .order__form-fieldset {
+    padding-bottom: 5%;
+    margin-bottom: 0; }
+  .order__form-habits {
+    max-width: 82%;
+    max-height: 174px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px; }
+  .order__form-textarea .order__form-legend {
+    width: 100%;
+    margin-bottom: 50px; }
+  .order__form-legend,
+  .order__form-textarea .order__form-legend {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: direction;
+            flex-direction: direction;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .order__form-legend::before, .order__form-legend::after,
+    .order__form-textarea .order__form-legend::before,
+    .order__form-textarea .order__form-legend::after {
+      content: "";
+      width: 50px;
+      height: 2px;
+      background-color: #68b738; }
+    .order__form-legend::after,
+    .order__form-textarea .order__form-legend::after {
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+  .order__form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: direction;
+            flex-direction: direction;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 70px; }
+  .order__form-label--checkbox {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .order__form-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: direction;
+            flex-direction: direction;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 70px; }
+  .order__form-button {
+    max-width: 50%;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0.5em 1em; }
+  .order__text-small {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2; } }
 
 /*# sourceMappingURL=style.css.map */
