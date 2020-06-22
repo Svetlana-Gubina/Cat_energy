@@ -28,11 +28,10 @@
 }
 
 .example__table {
-    outline: 2px dashed purple;
     margin-bottom: 5%;
 
     padding: 2%;
-    
+
 }
 
 .example__text {
@@ -54,7 +53,6 @@
 .example_slider-div {
     max-width: 100%;
     height: 232px;
-    outline: 2px dashed crimson;
 }
 
 .example_slider-toggle {
@@ -63,28 +61,27 @@
 
 @media screen and (min-width: $tablet-width) {
     .example {
-        padding: 0;
-        padding-right: 5%;
-        padding-left: 5%;
+      display: block;
+      padding: 0;
+      padding-right: 5%;
+      padding-left: 5%;
     }
 
     .example__heading {
-        font-size: 60px;
-        font-weight: 400;
-        line-height: 1;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 1;
     }
 
     .example__paragraph {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.5;
-        text-align: left;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: left;
     }
 
     .example__tablet-container {
-        outline: 2px dashed blue;
         width: 100%;
-        margin-bottom: 2%;
         @include indent();
         @include flex($direction: row);
     }
@@ -109,8 +106,6 @@
     }
 
     .example__text {
-        outline: 2px dashed red;
-        margin-top: 0;
         margin-bottom: 0;
         margin-right: 0;
         font-family: "Oswald", Arial, Helvetica, sans-serif;
@@ -131,5 +126,53 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .example {
+    padding: 0;
+    margin-bottom: 0;
+ }
 
+  .example__heading {
+    background-color: #ffffff;
+    width: 100%;
+    text-align: left;
+    padding: 70px;
+    margin: 0;
+  }
+
+  .example__paragraph {
+    max-width: 430px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 55%;
+  }
+
+  .example__tablet-container {
+    outline: 2px dashed purple;
+    flex-direction: column;
+    max-width: 50%;
+    margin-bottom: 0;
+  }
+
+  .example__text {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .example__tablet-container,
+  .example_slider {
+    background-color: $bg-color;
+  }
+
+  .example__table {
+    margin-bottom: 0;
+  }
+
+  .example_slider {
+    outline: 3px dashed royalblue;
+    max-width: 49%;
+    margin-bottom: 0;
+    margin-left: 50%;
+    margin-top: -25%;
+  }
 }

@@ -4,3 +4,9 @@
     height: 645px;
     box-sizing: border-box;
 }
+
+@media screen and (min-width: $desktop-width) {
+  .map {
+    max-height: 265px;
+  }
+}

@@ -1,7 +1,16 @@
 .wrapper {
     outline: 3px dashed crimson;
     /*min-width: $mobile-width;*/
-    width: $tablet-width;
+    width: $desktop-width;
     margin-right: auto;
     margin-left: auto;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .wrapper {
+    background-image: url("../../images/index-background-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50% 499px;
+  }
 }

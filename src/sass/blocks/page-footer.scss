@@ -61,5 +61,14 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .page-footer {
+    @include flex($direction: row);
+    justify-content: space-between;
+    flex-wrap: nowrap; //
+  }
 
+  .page-footer__container {
+    max-width: 20%;
+    padding: 5%;
+  }
 }

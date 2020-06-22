@@ -8,8 +8,6 @@
 }
 
 .product-types__target {
-    outline: 2px dashed crimson;
-
     width: 100%;
     box-sizing: border-box;
     padding: 9.375%;
@@ -19,8 +17,6 @@
 }
 
 .product-types__heading {
-    outline: 2px dashed crimson;
-
     color: $dark-color;
     font-family: "Oswald", Arial, Helvetica, sans-serif;
     font-size: 24px;
@@ -69,8 +65,6 @@
     }
 
     .product-types__target {
-        outline: 2px dashed crimson;
-
         padding-left: 5%;
         padding-right: 50%;
         padding-top: 10%;
@@ -92,5 +86,40 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .product-types {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .product-types__target {
+    max-width: 45%;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+  .product-types__heading {
+    position: relative;
+    text-align: center;
+    padding-left: 100px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .product-types__target--slim .product-types__heading::before {
+    background-image: url("../../images/cat1-desctop.png");
+  }
+
+  .product-types__target--pro .product-types__heading::before {
+    background-image: url("../../images/cat2-desctop.png");
+    width: 134px;
+  }
 
 }

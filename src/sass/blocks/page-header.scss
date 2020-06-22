@@ -4,11 +4,14 @@
     font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
+    // @include indent();
 }
 
 @media screen and (min-width: $tablet-width) {
     .page-header {
         margin-bottom: 5%;
+        padding-left: 70px;
+        padding-right: 70px;
     }
 }
 

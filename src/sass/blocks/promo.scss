@@ -1,5 +1,4 @@
 .promo {
-    outline: 3px dashed red;
     padding: 9.375%;
     box-sizing: border-box;
     margin-bottom: 10%;
@@ -74,5 +73,28 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .promo {
+    margin-bottom: 5%;
+  }
 
+  .promo__heading {
+    margin-bottom: 5%;
+  }
+
+  .promo__list {
+    justify-content: space-between;
+  }
+
+  .promo__item {
+    width: 220px;
+    min-height: 230px;
+    padding: 0;
+    padding-top: 100px;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+
+
+    // background-image: url();
+  }
 }

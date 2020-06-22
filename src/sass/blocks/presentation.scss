@@ -13,7 +13,6 @@
 }
 
 .presentation__title {
-    outline: 2px dashed crimson;
     color: #ffffff;
     /*font-family: "Oswald", Arial, Helvetica, sans-serif;*/
     font-size: 36px;
@@ -40,8 +39,6 @@
 }
 
 .presentation__can {
-    outline: 2px dashed crimson;
-
     width: 280px;
     height: 270px;
     @include margin-auto();
@@ -49,8 +46,6 @@
 }
 
 .presentation__button {
-    outline: 2px dashed crimson;
-
     width: 100%;
     margin-bottom: 10%;
 }
@@ -62,7 +57,7 @@
         min-height: 800px;
         display: block;
         background-color: #ffffff;
-        background-color: lightgreen;
+        // background-color: lightgreen;
 
         text-align: left;
     }
@@ -91,5 +86,30 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .presentation {
+    position: relative;
+    min-height: 384px;
+    background-color: transparent;
+    padding: 0 70px;
+    margin-bottom: 70px;
+  }
+
+  .presentation__can {
+    position: absolute;
+    width: 402px;
+    height: 349px;
+    top: -10%;
+    left: 45%;
+  }
+
+  .presentation__title {
+    max-width: 500px;
+    font-size: 60px;
+    margin: 0;
+    padding: 0.2em;
+    padding-left: 0;
+
+    z-index: 10;
+  }
 
 }
