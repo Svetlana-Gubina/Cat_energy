@@ -24,7 +24,6 @@
   margin-bottom: 2%;
 }
 
-
 /*----------FORM---------------------*/
 ::-webkit-input-placeholder {
   @include placeholder();
@@ -64,8 +63,6 @@
   line-height: 1;
 }
 
-
-
 .order__form-container {
   margin: 0;
   padding: 0;
@@ -78,7 +75,6 @@
   margin-bottom: 2%;
   padding: 0;
 }
-
 
 .order__form-block {
   outline: 2px dashed fuchsia;
@@ -97,7 +93,6 @@
   line-height: 1.2;
   text-transform: uppercase;
 }
-
 
 .order__form-block--name label {
   margin: 0;
@@ -124,15 +119,15 @@
   padding-left: 3em;
 
   &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 30px;
-      height: 30px;
-      border: 1px solid #cdcdcd;
-      border-radius: 50%;
-      background-color: transparent
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    background-color: transparent;
   }
 }
 
@@ -171,7 +166,6 @@
   background-color: lawngreen;
 }
 
-
 /*---------------textarea-------------------------------------*/
 
 .order__form-block--textarea {
@@ -202,14 +196,14 @@
   padding-left: 3em;
 
   &::before {
-      content: "";
-      position: absolute;
-      top: 20%;
-      left: 0;
-      width: 30px;
-      height: 30px;
-      border: 1px solid #cdcdcd;
-      background-color: transparent
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    background-color: transparent;
   }
 }
 
@@ -218,7 +212,6 @@
 
 }
 */
-
 
 /*---------------FORM-FOOTER--------------------*/
 
@@ -241,7 +234,7 @@
 
 @media screen and (min-width: $tablet-width) {
   .order {
-      width: 100%;
+    width: 100%;
   }
 
   .order__form-add {
@@ -261,144 +254,142 @@
 
   .order__form {
     min-width: 100%;
-}
-
-.order__heading {
-  font-size: 60px;
-  font-weight: 400;
-}
-
-.order__paragraph {
-  max-width: 50%;
-  font-size: 20px;
-  margin-left: 70px;
-  font-weight: 400;
-}
-
-.order__form-block--name {
-  @include flex();
-}
-
-.order__form-name {
-  flex-grow: 1;
-  border: none;
-  border-left: 1px solid #cdcdcd;
-  border-right: 1px solid #cdcdcd;
-}
-
-.order__form-block--name label {
-  margin-right: 20px;
-}
-
-.order__form-fieldset--name,
-.order__form-fieldset--target {
-  padding: 70px;
-}
-
-.order__form-radio:checked + label::after {
-  top: 26%;
-  left: 1.8%;
-}
-
-.order__form-block--target {
-  margin: 0;
-  padding: 2%;
-  border-left: 1px solid #cdcdcd;
-  border-right: 1px solid #cdcdcd;
-}
-
-.order__form-fieldset--contacts {
-  @include flex($direction: column);
-}
-
-.order__form-fieldset--contacts label {
-  margin-right: 20px;
-}
-
-.order__form-block--contacts {
-  @include flex();
-  padding-left: 70px;
-  padding-right: 70px;
-}
-
-.order__form-contact {
-  flex-grow: 1;
-}
-
-.order__form-block--textarea {
-  margin: 0;
-  padding-bottom: 0;
-}
-
-.order__form-fieldset {
-  padding-bottom: 5%;
-  margin-bottom: 0;
-}
-
-.order__form-habits {
-  max-width: 82%;
-  max-height: 174px;
-  margin-right: auto;
-  margin-left: auto;
-
-  margin-bottom: 50px;
-}
-
-.order__form-textarea .order__form-legend {
-  width: 100%;
-  margin-bottom: 50px;
-}
-
-.order__form-legend,
-.order__form-textarea .order__form-legend {
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 1.2;
-
-  @include flex();
-  align-items: center;
-
-  &::before,
-  &::after {
-    content: "";
-    width: 50px;
-    height: 2px;
-    background-color: $base-color;
   }
 
-  &::after {
+  .order__heading {
+    font-size: 60px;
+    font-weight: 400;
+  }
+
+  .order__paragraph {
+    max-width: 50%;
+    font-size: 20px;
+    margin-left: 70px;
+    font-weight: 400;
+  }
+
+  .order__form-block--name {
+    @include flex();
+  }
+
+  .order__form-name {
+    flex-grow: 1;
+    border: none;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+  }
+
+  .order__form-block--name label {
+    margin-right: 20px;
+  }
+
+  .order__form-fieldset--name,
+  .order__form-fieldset--target {
+    padding: 70px;
+  }
+
+  .order__form-radio:checked + label::after {
+    top: 26%;
+    left: 1.8%;
+  }
+
+  .order__form-block--target {
+    margin: 0;
+    padding: 2%;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+  }
+
+  .order__form-fieldset--contacts {
+    @include flex($direction: column);
+  }
+
+  .order__form-fieldset--contacts label {
+    margin-right: 20px;
+  }
+
+  .order__form-block--contacts {
+    @include flex();
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .order__form-contact {
     flex-grow: 1;
   }
-}
 
+  .order__form-block--textarea {
+    margin: 0;
+    padding-bottom: 0;
+  }
 
-.order__form-container {
-  @include flex($direction: row);
-  padding: 70px;
-}
+  .order__form-fieldset {
+    padding-bottom: 5%;
+    margin-bottom: 0;
+  }
 
-.order__form-label--checkbox {
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
+  .order__form-habits {
+    max-width: 82%;
+    max-height: 174px;
+    margin-right: auto;
+    margin-left: auto;
 
-.order__form-footer {
-  @include flex($direction: row);
-  padding: 70px;
-}
+    margin-bottom: 50px;
+  }
 
-.order__form-button {
-  max-width: 50%;
-  font-size: 20px;
-  font-weight: 400;
-  padding: 0.5em 1em;
-}
+  .order__form-textarea .order__form-legend {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 
-.order__text-small {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.2;
-}
+  .order__form-legend,
+  .order__form-textarea .order__form-legend {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
 
+    @include flex();
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 50px;
+      height: 2px;
+      background-color: $base-color;
+    }
+
+    &::after {
+      flex-grow: 1;
+    }
+  }
+
+  .order__form-container {
+    @include flex($direction: row);
+    padding: 70px;
+  }
+
+  .order__form-label--checkbox {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .order__form-footer {
+    @include flex($direction: row);
+    padding: 70px;
+  }
+
+  .order__form-button {
+    max-width: 50%;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0.5em 1em;
+  }
+
+  .order__text-small {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
 }

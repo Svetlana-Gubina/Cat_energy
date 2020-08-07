@@ -1,97 +1,108 @@
 .main-nav__flex {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .main-nav__flex-logo {
-    @include flex ($direction: row);
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
+  @include flex($direction: row);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
 }
 
 .main-nav__toggle {
-    font-size: 0;
-    width: 24px;
-    height: 18px;
-    background-color: #222222;
+  font-size: 0;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+
+  display: flex;
+  font-size: 0;
+  border: 0 none;
+  box-shadow: 0 none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='19.958px' height='14px' viewBox='0 0 19.958 14' enable-background='new 0 0 19.958 14' xml:space='preserve'%3E%3Crect fill='black' width='19.958' height='2'/%3E%3Crect fill='black' y='6' width='19.958' height='2'/%3E%3Crect fill='black' y='12' width='19.958' height='2'/%3E%3C/svg%3E%0A");
+}
+
+.main-nav__toggle-close {
+  width: 21px;
+  height: 21px;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='20.514px' height='20.512px' viewBox='0 0 20.514 20.512' enable-background='new 0 0 20.514 20.512' xml:space='preserve'%3E%3Cpolygon fill='%23231F20' points='20.513,1.414 19.099,0 10.256,8.842 1.414,0 0,1.414 8.842,10.256 0,19.098 1.414,20.512 10.256,11.67 19.099,20.512 20.513,19.098 11.671,10.256 '/%3E%3C/svg%3E%0A");
 }
 
 .main-nav__list {
-    @include list();
-    @include flex ($direction: column);
-    box-sizing: border-box;
+  @include list();
+  @include flex($direction: column);
+  box-sizing: border-box;
 }
 
 .main-nav__item {
-    outline: 2px dashed blue;
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .main-nav__link {
-    display: block;
-    padding: 1em;
-    color: $dark-color;
-    text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: $dark-color;
+  text-decoration: none;
 
-    &-hover,
-    &:hover {
-        opacity: 0.6;
-    }
+  &-hover,
+  &:hover {
+    opacity: 0.6;
+  }
 
-    &-focus,
-    &:focus {
-        opacity: 0.6;
-    }
+  &-focus,
+  &:focus {
+    opacity: 0.6;
+  }
 
-    &-active,
-    &:active {
-        opacity: 0.3;
-    }
+  &-active,
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-
 @media screen and (min-width: $desktop-width) {
-    .main-nav {
-        @include flex ($direction: row);
-    }
+  .main-nav {
+    @include flex($direction: row);
+  }
 
-    .main-nav__list {
-        flex-direction: row;
-    }
+  .main-nav__list {
+    flex-direction: row;
+  }
 
-    .main-nav__flex-logo {
-        max-width: 30%;
-        margin-right: auto;
-    }
+  .main-nav__flex-logo {
+    max-width: 30%;
+    margin-right: auto;
+  }
 
-    .main-nav__item {
-        width: auto;
-    }
+  .main-nav__item {
+    width: auto;
+  }
 
-    .main-nav__link {
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 24.86px;
-      text-transform: uppercase;
-      color: #ffffff;
-    }
+  .main-nav__link {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.86px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
 
-    .main-nav__link--active {
-        position: relative;
-    }
+  .main-nav__link--active {
+    position: relative;
+  }
 
-    .main-nav__link--active::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 10%;
-        width: 80%;
-        height: 3px;
-        background-color: $base-color;
-    }
+  .main-nav__link--active::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background-color: $base-color;
+  }
 
-    .main-nav__link--cat {
-      color: #222222;
-    }
+  .main-nav__link--cat {
+    color: #222222;
+  }
 }

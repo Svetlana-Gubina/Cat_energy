@@ -1,20 +1,28 @@
 .page-header {
-    font-family: "Oswald", Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1;
-    text-transform: uppercase;
-    // @include indent();
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  @include indent();
+}
+
+.page-header__mascot {
+  outline: 2px dashed royalblue;
+  @include indent();
+  width: 33px;
+  min-height: 38px;
+  background-image: url("../../images/logo-mobile.png");
+  background-repeat: no-repeat;
 }
 
 @media screen and (min-width: $tablet-width) {
-    .page-header {
-        margin-bottom: 5%;
-        padding-left: 70px;
-        padding-right: 70px;
-    }
+  .page-header {
+    margin-bottom: 5%;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 @media screen and (min-width: $desktop-width) {
-
 }
