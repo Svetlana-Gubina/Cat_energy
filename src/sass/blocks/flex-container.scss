@@ -1,0 +1,9 @@
+.flex-container {
+  @include indent();
+}
+
+@media screen and (min-width: $desktop-width) {
+  .flex-container {
+    position: relative;
+  }
+}

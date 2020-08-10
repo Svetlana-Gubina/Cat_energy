@@ -26,6 +26,6 @@
   toggle.addEventListener("click", function (evt) {
     evt.preventDefault();
     this.classList.toggle("main-nav__toggle-close");
-    // menu.classList.toggle("visually-hidden");
+    menu.classList.toggle("visually-hidden");
   });
 })();

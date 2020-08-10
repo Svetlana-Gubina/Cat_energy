@@ -1,135 +1,262 @@
 .example {
-    margin-bottom: 10%;
-    background-color: $bg-color;
+  min-width: $mobile-width;
+  width: 100%;
+  max-width: 100%;
+  @include indent();
+  margin-bottom: 10%;
+  background-color: $bg-color;
 
-    @include flex($direction: column);
-    justify-content: flex-start;
-    align-items: center;
-    padding: 9.375%;
-    text-align: center;
-    box-sizing: border-box;
+  @include flex($direction: column);
+  align-items: center;
+  padding: 9.375%;
+  text-align: center;
 }
 
 .example__heading {
-    color: $dark-color;
-    font-family: "Oswald", Arial, Helvetica, sans-serif;
-    color: $dark-color;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 2;
-    margin-bottom: 10%;
+  @include indent();
+  color: $dark-color;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  color: $dark-color;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 2;
+  margin-bottom: 10%;
 }
 
 .example__paragraph {
-    padding: 0.2em;
-    box-sizing: border-box;
-    margin-bottom: 10%;
-    @include margin-auto();
+  font-family: Arial, Helvetica, sans-serif;
+  @include indent();
+  padding: 0.2em 0;
+  margin-bottom: 10%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.example__tablet-container {
+  width: 100%;
+  max-width: 100%;
+  @include indent();
+  @include flex($direction: column);
+  align-items: center;
 }
 
 .example__table {
-    margin-bottom: 5%;
+  width: 100%;
+  max-width: 100%;
+  @include indent();
+  @include flex();
+  flex-wrap: nowrap;
+  margin-bottom: 10%;
+}
 
-    padding: 2%;
+.example__table-column {
+  @include indent();
+  max-width: 50%;
+  flex: auto;
+  padding: 1em;
+  padding-bottom: 0.5em;
+  border: 1px solid #cdcdcd;
+}
 
+.example__table-column:first-child {
+  margin-right: 10%;
+}
+
+.example__table-cell {
+  @include indent();
+}
+
+.example__table-cell--number {
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.example__table-cell--text {
+  @include indent();
+  max-width: 70%;
+  padding: 0.5em;
+  font-size: 12px;
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  @include margin-auto();
+  margin-bottom: -30px;
+  background-color: $bg-color;
 }
 
 .example__text {
-    color: $dark-color;
-    font-size: 14px;
-    font-weight: 800;
-    line-height: 1.5;
-    text-transform: uppercase;
-    text-align: center;
-    @include margin-auto();
+  @include indent();
+  color: $dark-color;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+  @include margin-auto();
+  margin-bottom: 10%;
 }
 
-.example_slider {
-    outline: 3px dashed royalblue;
+.example__slider {
+  width: 100%;
+  max-width: 100%;
+  @include indent();
+}
+
+.example__slider-div {
+  width: 100%;
+  max-width: 100%;
+  @include indent();
+  margin-bottom: 20px;
+  min-height: 232px;
+
+  background-image: url("../../images/mobile/before-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+.example__slider-toggle {
+  width: 100%;
+  max-width: 100%;
+  @include indent();
+}
+
+.example__slider-switch {
+  @include indent();
+  padding: 0.5em;
+}
+
+.example__slider-label {
+  position: relative;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+  @include indent();
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.example__slider-label--before {
+  margin-right: 45px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 130%;
     width: 100%;
-    box-sizing: border-box;
+    height: 14px;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 1px solid #cdcdcd;
+    transition: 0.2s;
+    cursor: pointer;
+  }
 }
 
-.example_slider-div {
-    max-width: 100%;
-    height: 232px;
+.example__slider-label--after {
+  margin-left: 45px;
 }
 
-.example_slider-toggle {
+.example__slider-switch input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
 
+#radio-1:checked + label::after,
+#radio-2:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $base-color;
+  transition: 0.2s;
+}
+
+#radio-1:checked + label::after {
+  left: 135%;
+}
+
+#radio-2:checked + label::after {
+  left: -100%;
 }
 
 @media screen and (min-width: $tablet-width) {
-    .example {
-      display: block;
-      padding: 0;
-      padding-right: 5%;
-      padding-left: 5%;
-    }
+  .example {
+    display: block;
+    padding: 0;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
 
-    .example__heading {
-      font-size: 60px;
-      font-weight: 400;
-      line-height: 1;
-    }
+  .example__heading {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1;
+  }
 
-    .example__paragraph {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.5;
-      text-align: left;
-    }
+  .example__paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+  }
 
-    .example__tablet-container {
-        width: 100%;
-        @include indent();
-        @include flex($direction: row);
-    }
+  .example__tablet-container {
+    width: 100%;
+    @include indent();
+    @include flex($direction: row);
+  }
 
-    .example__table-row--top td {
-        border: 1px solid plum;
-        margin-right: 30px;
-    }
+  .example__table-row--top td {
+    border: 1px solid plum;
+    margin-right: 30px;
+  }
 
-    .example__table-cell--number {
-        font-family: "Oswald", Arial, Helvetica, sans-serif;
-        font-size: 30px;
-        font-weight: 400;
-        line-height: 1.2;
-        text-transform: uppercase;
-    }
+  .example__table-cell--number {
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
 
-    .example__table-cell--text {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1;
-    }
+  .example__table-cell--text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+  }
 
-    .example__text {
-        margin-bottom: 0;
-        margin-right: 0;
-        font-family: "Oswald", Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 1.5;
-        text-align: right;
-        max-width: 200px;
-        padding: 0;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-    }
+  .example__text {
+    margin-bottom: 0;
+    margin-right: 0;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: right;
+    max-width: 200px;
+    padding: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
 
-    .example_slider-toggle {
-        outline: 2px dashed red;
-        width: 100%;
-    }
+  .example__slider-toggle {
+    outline: 2px dashed red;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: $desktop-width) {
   .example {
     padding: 0;
     margin-bottom: 0;
- }
+  }
 
   .example__heading {
     background-color: #ffffff;
@@ -160,7 +287,7 @@
   }
 
   .example__tablet-container,
-  .example_slider {
+  .example__slider {
     background-color: $bg-color;
   }
 
@@ -168,7 +295,7 @@
     margin-bottom: 0;
   }
 
-  .example_slider {
+  .example__slider {
     outline: 3px dashed royalblue;
     max-width: 49%;
     margin-bottom: 0;

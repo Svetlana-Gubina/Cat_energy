@@ -1,9 +1,10 @@
 .page-main {
-    box-sizing: border-box;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  @include indent();
 }
 
 @media screen and (min-width: $tablet-width) {
-    .page-main {
-        padding: 0;
-    }
+  .page-main {
+    // padding: 0;
+  }
 }
