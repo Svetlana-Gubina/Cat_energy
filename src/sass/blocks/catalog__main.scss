@@ -1,244 +1,258 @@
 .catalog__main {
-    padding: 10%;
-    box-sizing: border-box;
+  @include indent();
+  padding: 5% 0;
+  border-bottom: 2px solid lightgrey;
 }
 
 .catalog__heading {
-    color: $dark-color;
-    font-family: "Oswald", Arial, Helvetica, sans-serif;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 1.8;
-    margin: 0;
-    padding: 0.2em;
+  color: $dark-color;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0.2em;
 }
 
 .catalog__list {
-    @include list();
-    @include flex($direction: column);
+  @include list();
+  @include flex($direction: column);
 }
 
 .catalog__item {
-    outline:  3px dashed red;
-    width: 100%;
-    margin-bottom: 5%;
-    padding: 0;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    @include flex($direction: column);
-    box-sizing: border-box;
-}
-
-.catalog__item-container,
-.catalog__item-block {
-    margin: 0;
-    padding: 0;
-}
-
-.catalog__item-container img {
-    outline: 2px dashed red;
-    width: 140px;
-    height: auto;
+  width: 100%;
+  max-width: 100%;
+  @include indent();
+  padding: 5%;
+  @include flex($direction: column);
 }
 
 .catalog__item-container {
-    width: 100%;
-    margin-bottom: 5%;
-    @include flex($direction: row);
+  width: 100%;
+  max-width: 100%;
+  @include indent();
+  margin-bottom: 5%;
+  @include flex($direction: row);
+}
+
+.catalog__item-container img {
+  width: 140px;
+  height: auto;
+  object-fit: cover;
 }
 
 .catalog__item-block {
-    outline: 2px dashed red;
-    max-width: calc(100% - 140px);
+  @include indent();
+  padding: 5%;
+  padding-right: 0;
+  flex: auto;
 }
 
 .catalog__button {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .catalog__item-heading a {
-    display: block;
-    padding: 0.5em;
-    color: $dark-color;
-    font-family: "Oswald", Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    text-transform: uppercase;
-    text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  color: $dark-color;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-decoration: none;
+  max-width: 40%;
+}
+
+.catalog__item-table {
+  width: 100%;
+  color: #444444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.catalog__item-table th {
+  text-align: left;
+  font-weight: normal;
+}
+
+.catalog__item-table td {
+  text-align: right;
 }
 
 .catalog__show {
-    outline: 2px dashed red;
-    min-height: 184px;
-    @include flex($direction: column);
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
+  width: 100%;
+  max-width: 100%;
+  min-height: 184px;
+  @include indent();
+  @include flex();
+  flex-direction: column;
+  text-decoration: none;
 }
 
 .catalog__show-plus {
-    outline: 2px dashed blue;
-    position: relative;
-    margin: auto;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    padding: 0;
+  position: relative;
+  @include indent();
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 30px;
+  height: 30px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
     width: 30px;
-    height: 30px;
+    height: 2px;
+    background-color: lightgrey;
+  }
 
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        width: 30px;
-        height: 2px;
-        background-color: red;
-    }
+  &::before {
+    top: 50%;
+    left: 0;
+  }
 
-    &::before {
-        top: 50%;
-        left: 0;
-    }
-
-    &::after {
-        top: 50%;
-        left: 0;
-        transform: rotate(-90deg);
-    }
+  &::after {
+    top: 50%;
+    left: 0;
+    transform: rotate(-90deg);
+  }
 }
 
-.catalog__show-paragraph{
-    outline: 2px dashed blue;
-    color: $dark-color;
-    font-family: "Oswald", Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    text-transform: uppercase;
-    margin: 0;
-    margin-bottom: 2%;
-    padding: 0.5em;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+.catalog__show-paragraph {
+  color: $dark-color;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+  @include indent();
+  padding: 0.5em;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .catalog__show-span {
-    outline: 2px dashed red;
-    color: $dark-color;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-    margin-bottom: 5%;
-    padding: 0.5em;
-    color: $light-color;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+  color: $dark-color;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  @include indent();
+  padding: 0.5em;
+  margin-bottom: 5%;
+  color: $light-color;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .catalog__show .catalog__show-button {
-    color: $light-color;
-    background-color: $bg-color;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
+  color: $light-color;
+  background-color: $bg-color;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 @media screen and (min-width: $tablet-width) {
-    .catalog__main {
-        padding: 0;
-    }
+  .catalog__main {
+    padding: 0;
+  }
 
-    .catalog__heading {
-        font-size: 60px;
-        font-weight: 400;
-        line-height: 1;
-    }
+  .catalog__heading {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1;
+  }
 
-    .catalog__list {
-        @include flex($direction: row);
-        justify-content: space-between;
-        padding-top: 80px;
-    }
+  .catalog__list {
+    @include flex($direction: row);
+    justify-content: space-between;
+    padding-top: 80px;
+  }
 
-    .catalog__item {
-        max-width: 50%;
-        max-width: 324px;
-        margin-bottom: 15%;
-        position: relative;
-        padding: 30px;
-        padding-top: 160px;
-        background-color: lightblue;
-    }
+  .catalog__item {
+    max-width: 50%;
+    max-width: 324px;
+    margin-bottom: 15%;
+    position: relative;
+    padding: 30px;
+    padding-top: 160px;
+    background-color: lightblue;
+  }
 
-    .catalog__item--last {
-        padding-top: 30px;
-    }
+  .catalog__item--last {
+    padding-top: 30px;
+  }
 
-    .catalog__item-container img {
-        position: absolute;
-        top: 10%;
-        left: 25%;
-    }
+  .catalog__item-container img {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+  }
 
-    .catalog__item-block {
-        width: 100%;
-        max-width: 100%;
-        text-align: center;
-    }
+  .catalog__item-block {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
 
-    .catalog__item-table {
-        background-color: lightcoral;
-        width: 100%;
-    }
+  .catalog__item-table {
+    background-color: lightcoral;
+    width: 100%;
+  }
 
-    .catalog__show {
-        max-width: 100%;
-        height: 100%;
-    }
+  .catalog__show {
+    max-width: 100%;
+    height: 100%;
+  }
 
-    .catalog__show .catalog__show-button {
-        margin-bottom: 0;
-        margin-top: auto;
-    }
+  .catalog__show .catalog__show-button {
+    margin-bottom: 0;
+    margin-top: auto;
+  }
 
-    .catalog__show-span {
-        font-size: 16px;
-        font-weight: 400;
-        max-width: 165px;
-        text-align: center;
-    }
+  .catalog__show-span {
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 165px;
+    text-align: center;
+  }
 
-    .catalog__show-plus {
-        width: 100%;
-        height: 60px;
+  .catalog__show-plus {
+    width: 100%;
+    height: 60px;
 
-        &::before,
-        &::after {
-            width: 60px;
-        }
+    &::before,
+    &::after {
+      width: 60px;
     }
+  }
 
-    .catalog__show-paragraph{
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 1;
-        text-align: center;
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 133px;
-    }
+  .catalog__show-paragraph {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 133px;
+  }
 
-    .catalog__button {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.5;
-    }
+  .catalog__button {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
 }
 
 @media screen and (min-width: $desktop-width) {
@@ -266,6 +280,5 @@
   .catalog__item {
     max-width: 220px;
     margin-right: 30px;
-
   }
 }

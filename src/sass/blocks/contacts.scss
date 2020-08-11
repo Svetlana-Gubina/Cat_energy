@@ -3,6 +3,7 @@
   justify-content: space-between;
   @include indent();
   padding: 10%;
+  background-color: $bg-color;
 }
 
 .contacts__ivite {

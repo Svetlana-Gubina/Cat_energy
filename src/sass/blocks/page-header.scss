@@ -5,6 +5,7 @@
   line-height: 1;
   text-transform: uppercase;
   @include indent();
+  border-bottom: 2px solid lightgrey;
 }
 
 .page-header__mascot {
