@@ -39,7 +39,7 @@
           <div class="main-nav__flex">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--active">Главная</a>
+                <a class="main-nav__link" href="index.html">Главная</a>
               </li>
               <li class="main-nav__item">
                 <a class="main-nav__link" href="catalog.html"
@@ -47,7 +47,9 @@
                 >
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Подбор программы</a>
+                <a class="main-nav__link main-nav__link--active"
+                  >Подбор программы</a
+                >
               </li>
             </ul>
           </div>
@@ -58,7 +60,8 @@
         <section class="order__block">
           <h1 class="order__heading">Подбор программы</h1>
           <p class="order__paragraph">
-            Заполните анкету и мы подберем программу питания для вашего кота
+            Заполните анкету и мы подберем<br />
+            программу питания для вашего кота
           </p>
           <form
             class="order__form"
@@ -66,122 +69,132 @@
             method="post"
           >
             <fieldset class="order__form-fieldset order__form-fieldset--name">
-              <h3 class="visually-hidden">Общая информация</h3>
-              <p class="order__form-block order__form-block--name">
-                <label for="name">Имя:*</label>
-                <input
-                  class="order__form-name"
-                  id="name"
-                  type="text"
-                  name="Name"
-                  placeholder="Барсик"
-                  required
-                />
-              </p>
-              <p class="order__form-block order__form-block--name">
-                <label for="weight">Вес (кг):*</label>
-                <input
-                  class="order__form-name"
-                  id="weight"
-                  type="number"
-                  name="Weight"
-                  placeholder="7"
-                  required
-                />
-              </p>
-              <p class="order__form-block order__form-block--name">
-                <label for="age">Возраст (лет):</label>
-                <input
-                  class="order__form-name"
-                  id="age"
-                  type="number"
-                  name="Age"
-                  placeholder="7"
-                />
-              </p>
+              <legend class="visually-hidden">Общая информация</legend>
+              <div class="order__form-container">
+                <p class="order__form-block order__form-block--name">
+                  <label for="name">Имя:*</label>
+                  <input
+                    class="order__form-name"
+                    id="name"
+                    type="text"
+                    name="Name"
+                    placeholder="Барсик"
+                    required
+                  />
+                </p>
+                <p class="order__form-block order__form-block--name">
+                  <label for="weight">Вес (кг):*</label>
+                  <input
+                    class="order__form-name"
+                    id="weight"
+                    type="number"
+                    name="Weight"
+                    placeholder="7"
+                    required
+                  />
+                </p>
+                <p class="order__form-block order__form-block--name">
+                  <label for="age">Возраст (лет):</label>
+                  <input
+                    class="order__form-name"
+                    id="age"
+                    type="number"
+                    name="Age"
+                    placeholder="7"
+                  />
+                </p>
+              </div>
             </fieldset>
 
             <fieldset class="order__form-fieldset order__form-fieldset--target">
-              <h3 class="visually-hidden">Цель</h3>
-              <p class="order__form-block order__form-block--target">
-                <input
-                  class="order__form-radio"
-                  id="slimm"
-                  type="radio"
-                  name="Purpose"
-                  value="Похудение"
-                  checked
-                />
-                <label
-                  class="order__form-label order__form-label--radio"
-                  for="slimm"
-                  >Похудение</label
-                >
-              </p>
-              <p class="order__form-block order__form-block--target">
-                <input
-                  class="order__form-radio"
-                  id="massGain"
-                  type="radio"
-                  name="Purpose"
-                  value="Набор массы"
-                />
-                <label
-                  class="order__form-label order__form-label--radio"
-                  for="massGain"
-                  >Набор массы</label
-                >
-              </p>
-              <p class="order__form-block order__form-block--target">
-                <input
-                  class="order__form-radio"
-                  id="advice"
-                  type="radio"
-                  name="Purpose"
-                  value="Не знаю (Нужен ваш совет)"
-                />
-                <label
-                  class="order__form-label order__form-label--radio"
-                  for="advice"
-                  >Не знаю (Нужен ваш совет)</label
-                >
-              </p>
+              <legend class="visually-hidden">Цель</legend>
+              <div class="order__form-container order__form-container--target">
+                <p class="order__form-block order__form-block--target">
+                  <input
+                    class="order__form-radio"
+                    id="slimm"
+                    type="radio"
+                    name="Purpose"
+                    value="Похудение"
+                    checked
+                  />
+                  <label
+                    class="order__form-label order__form-label--radio"
+                    for="slimm"
+                    >Похудение</label
+                  >
+                </p>
+                <p class="order__form-block order__form-block--target">
+                  <input
+                    class="order__form-radio"
+                    id="massGain"
+                    type="radio"
+                    name="Purpose"
+                    value="Набор массы"
+                  />
+                  <label
+                    class="order__form-label order__form-label--radio"
+                    for="massGain"
+                    >Набор массы</label
+                  >
+                </p>
+                <p class="order__form-block order__form-block--target">
+                  <input
+                    class="order__form-radio"
+                    id="advice"
+                    type="radio"
+                    name="Purpose"
+                    value="Не знаю (Нужен ваш совет)"
+                  />
+                  <label
+                    class="order__form-label order__form-label--radio"
+                    for="advice"
+                    >Не знаю (Нужен ваш совет)</label
+                  >
+                </p>
+              </div>
             </fieldset>
 
             <fieldset
               class="order__form-fieldset order__form-fieldset--contacts"
             >
-              <h3 class="order__form-legend">
-                Контактные данные (владельца кота)
-              </h3>
-              <p class="order__form-block order__form-block--contacts">
-                <label for="email">E-mail:*</label>
-                <input
-                  class="order__form-contact"
-                  id="email"
-                  type="email"
-                  name="E-mail"
-                  placeholder="kuklachev@gmail.com"
-                  required
-                />
-              </p>
-              <p class="order__form-block order__form-block--contacts">
-                <label for="tel">Телефон:*</label>
-                <input
-                  class="order__form-contact"
-                  id="tel"
-                  type="tel"
-                  name="Telephone"
-                  placeholder="8 (960) 900-60-90"
-                  required
-                />
-              </p>
+              <legend class="order__form-legend order__form-legend--name">
+                Контактные данные (владельца кота) <span></span>
+              </legend>
+
+              <div class="order__form-container">
+                <p class="order__form-block order__form-block--contacts">
+                  <label for="email">E-mail:*</label>
+                  <input
+                    class="order__form-contact"
+                    id="email"
+                    type="email"
+                    name="E-mail"
+                    placeholder="kuklachev@gmail.com"
+                    required
+                  />
+                </p>
+                <p class="order__form-block order__form-block--contacts">
+                  <label for="tel">Телефон:*</label>
+                  <input
+                    class="order__form-contact"
+                    id="tel"
+                    type="tel"
+                    name="Telephone"
+                    placeholder="8 (960) 900-60-90"
+                    required
+                  />
+                </p>
+              </div>
             </fieldset>
 
             <fieldset class="order__form-fieldset order__form-textarea">
+              <legend class="order__form-legend order__form-legend--textarea">
+                Комментарий <span></span>
+              </legend>
               <p class="order__form-block order__form-block--textarea">
-                <label class="order__form-legend" for="habits"
-                  >Комментарий</label
+                <label class="visually-hidden" for="habits"
+                  >Комментарий ></label
                 >
                 <textarea
                   class="order__form-habits"
@@ -193,7 +206,9 @@
             </fieldset>
 
             <fieldset class="order__form-fieldset order__form-add">
-              <h3 class="order__form-legend">Дополнительно</h3>
+              <legend class="order__form-legend">
+                Дополнительно <span></span>
+              </legend>
               <div class="order__form-container">
                 <p class="order__form-field">
                   <input

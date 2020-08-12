@@ -1,6 +1,7 @@
 .page-main {
   font-family: "Oswald", Arial, Helvetica, sans-serif;
   @include indent();
+  @include flex();
 }
 
 @media screen and (min-width: $tablet-width) {

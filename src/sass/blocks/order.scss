@@ -1,6 +1,6 @@
 .order__block {
   padding: 10%;
-  box-sizing: border-box;
+  @include indent();
 }
 
 .order__heading {
@@ -9,8 +9,8 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 1.8;
+  @include indent();
   padding: 0.5em;
-  margin: 0;
 }
 
 .order__paragraph {
@@ -19,12 +19,20 @@
   font-weight: 400;
   line-height: 1.5;
   text-transform: uppercase;
+  @include indent();
   padding: 0.5em;
-  margin: 0;
+  padding-left: 1em;
   margin-bottom: 2%;
 }
 
 /*----------FORM---------------------*/
+
+.order__form {
+  width: 100%;
+  max-width: 100%;
+  @include indent();
+}
+
 ::-webkit-input-placeholder {
   @include placeholder();
 }
@@ -38,51 +46,46 @@
   @include placeholder();
 }
 
-.order__form {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
 .order__form-fieldset {
   border: 0 none;
-  padding: 0;
-  padding-bottom: 5%;
-
+  width: 100%;
   max-width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 10%;
+  @include indent();
 }
 
 .order__form-legend {
-  position: relative;
-
   color: $dark-color;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1;
+  width: 100%;
+  max-width: 100%;
+  @include indent();
+  padding: 0.5em;
+  padding-right: 0;
+  margin-bottom: 20px;
+  @include flex();
+
+  & span {
+    min-width: 100px;
+    height: 3px;
+    background-color: $base-color;
+    flex: auto;
+    margin-left: auto;
+    margin-left: 10px;
+    margin-top: 12px;
+  }
 }
 
 .order__form-container {
-  margin: 0;
-  padding: 0;
+  @include indent();
+  padding: 5%;
   @include flex($direction: column);
 }
 
-.order__form-field {
-  width: 100%;
-  margin: 0;
-  margin-bottom: 2%;
-  padding: 0;
-}
-
 .order__form-block {
-  outline: 2px dashed fuchsia;
-  margin: 0;
-  padding: 0;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  box-sizing: border-box;
+  @include indent();
 }
 
 .order__form-label {
@@ -92,22 +95,40 @@
   font-weight: 400;
   line-height: 1.2;
   text-transform: uppercase;
+  @include indent();
+  padding: 0.5em;
+}
+
+.order__form-block--name {
+  width: 100%;
+  max-width: 100%;
+  @include flex();
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .order__form-block--name label {
-  margin: 0;
-  padding: 0.5em;
-  padding-left: 0;
   @include placeholder();
-
-  background-color: hotpink;
+  @include indent();
+  padding: 0.5em;
 }
 
 .order__form-name {
   padding: 0.5em;
-  background-color: lawngreen;
+  flex: auto;
+  border: 1px solid #cdcdcd;
+  box-shadow: none;
 }
 /*-----------------radio-------------------------------------*/
+
+.order__form-block--target {
+  width: 100%;
+  max-width: 100%;
+  @include flex();
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .order__form-radio {
   opacity: 0;
 }
@@ -115,6 +136,7 @@
 .order__form-label--radio {
   position: relative;
   display: block;
+  @include flex();
   padding: 0.5em;
   padding-left: 3em;
 
@@ -134,42 +156,85 @@
 .order__form-radio:checked + label::after {
   content: "";
   position: absolute;
-  top: 24%;
-  left: 4%;
+  top: 25%;
+  left: 0;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: $base-color;
 }
 
+.order__form-radio:checked + label:last-child::after {
+  left: 3%;
+}
+
+.order__form-label--radio {
+  @include flex();
+  padding: 0.5em;
+  padding-left: 3em;
+}
+
 /*----------contacts-----------------------------------------*/
 
+.order__form-legend--name {
+  flex-wrap: nowrap;
+
+  & span {
+    min-width: 155px;
+    margin-top: 20px;
+
+    @media screen and (min-width: 550px) {
+      margin-top: 10px;
+    }
+  }
+}
+
 .order__form-block--contacts {
-  /*@include flex($direction: row);*/
-  display: inline-block;
+  width: 100%;
   max-width: 100%;
-  box-sizing: border-box;
+  @include flex();
+  @include indent();
+  margin-bottom: 10px;
 }
 
 .order__form-block--contacts label {
-  /*display: block;*/
-  margin: 0;
-  padding: 0.5em;
-  padding-left: 0;
   @include placeholder();
-
-  background-color: hotpink;
+  @include indent();
+  padding: 0.5em;
 }
 
 .order__form-contact {
   padding: 0.5em;
-  background-color: lawngreen;
+  padding-right: 1em;
+  flex: auto;
+  border: 1px solid #cdcdcd;
+  box-shadow: none;
+}
+
+#email {
+  background-image: url("../../images/icons/mail.svg");
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+}
+
+#tel {
+  background-image: url("../../images/icons/phone.svg");
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
 }
 
 /*---------------textarea-------------------------------------*/
 
+.order__form-textarea {
+  @include indent();
+}
+
 .order__form-block--textarea {
-  @include flex($direction: column);
+  @include flex();
+  @include indent();
+  padding: 5%;
+
+  padding-bottom: 10%;
 }
 
 .order__form-habits {
@@ -185,6 +250,19 @@
 }
 /*-----------checkbox - Дополнительно------------------------*/
 
+.order__form-add {
+  @include indent();
+}
+
+.order__form-field {
+  width: 100%;
+  max-width: 100%;
+  @include indent();
+  margin-bottom: 25px;
+  @include flex();
+  align-items: center;
+}
+
 .order__form-checkbox {
   opacity: 0;
 }
@@ -192,13 +270,14 @@
 .order__form-label--checkbox {
   position: relative;
   display: block;
+  @include indent();
   padding: 0.5em;
   padding-left: 3em;
 
   &::before {
     content: "";
     position: absolute;
-    top: 20%;
+    top: 5%;
     left: 0;
     width: 30px;
     height: 30px;
@@ -207,29 +286,41 @@
   }
 }
 
-/*
-.order__form-checkbox:checked + label::before {
-
+.order__form-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  width: 21px;
+  height: 16px;
+  background-image: url("../../images/mobile/tick.png");
+  background-repeat: no-repeat;
 }
-*/
 
 /*---------------FORM-FOOTER--------------------*/
 
+.order__form-footer {
+  @include indent();
+  padding: 5%;
+}
+
 .order__form-button {
   width: 100%;
-  margin-bottom: 2%;
+  max-width: 100%;
+  margin-bottom: 20px;
 }
 
 .order__text-small {
-  margin: 0;
-  margin-bottom: 5%;
-  padding: 0.5em;
+  outline: 2px dashed red;
   color: $light-color;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
+  text-align: center;
 
-  margin-left: 10%;
+  @include indent();
+  margin-bottom: 5%;
+  padding: 0.5em;
 }
 
 @media screen and (min-width: $tablet-width) {

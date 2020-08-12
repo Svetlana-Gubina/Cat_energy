@@ -10,9 +10,11 @@
   @include flex($direction: column);
   align-items: center;
   background-color: $base-color;
-  background-image: url("../../images/mobile/gift-photo-mobile.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../../images/icons/gift.png"),
+    url("../../images/mobile/gift-photo-mobile.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: 50% 35%, 0 0;
 }
 
 .catalog__gift-text {
